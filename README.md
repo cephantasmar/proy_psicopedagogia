@@ -1,4 +1,4 @@
 # proy_psicopedagogia
-jean
-Cesar
+- jean
+- Cesar Raul Cayllante Cruz
 

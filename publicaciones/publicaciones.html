@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <!--Enlace del fondo: https://superbloov.life/product_details/51657552.html-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar</title>
-    <link rel="stylesheet" href="/index/style.css">
+    <link rel="stylesheet" href="/publicaciones/publicaciones.css">
+    <title>Cars UCB</title>
+
 </head>
 
 <body>
-    <!--BARRA DESPLEGABLE MENU-->
+
+
+<!--BARRA MENU DESPLEGABLE --------------------------------------------------------->
     <div class="menu">
         <ion-icon name="menu-outline"></ion-icon>
         <ion-icon name="close-outline"></ion-icon>
@@ -21,23 +25,17 @@
                 <img src="/index/img/logo.png" id="cloud" name="cloud-outline" class="logo_img" />
                 <span>UCB PSICOPEDAGOGIA</span>
             </div>
-
+    
         </div>
-
+    
         <!-------------------CARACTERISITCA DE LA BARRA DE MENU-------------------->
-
+    
         <nav class="navegacion">
             <ul class="dropdown" id="menu">
-
+    
+                
                 <li>
-                    <a id="inbox" href="/publicaciones/publicaciones.html">
-                        <ion-icon name="add-outline"></ion-icon>
-                        <span>Crear publicacion</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
+                    <a href="/index/index.html">
                         <ion-icon name="home-outline"></ion-icon>
                         <span>Inicio</span>
                     </a>
@@ -48,10 +46,10 @@
                         <ion-icon name="star-outline"></ion-icon>
                         <span>Formacion</span>
                         <img src="/index/assets/arrow.svg" class="dropdown__arrow">
-
+    
                         <input type="checkbox" class="dropdown__check">
                     </a>
-
+    
                     <div class="dropdown__content">
                         <ul class="dropdown__sub">
                             <li class="dropdown__li">
@@ -65,7 +63,7 @@
                             </li>
                         </ul>
                     </div>
-
+    
                 </li>
                 <!------------------------------------------------->
                 <li class="dropdown__list">
@@ -73,7 +71,7 @@
                         <ion-icon name="paper-plane-outline"></ion-icon>
                         <span>Investigacion</span>
                         <img src="/index/assets/arrow.svg" class="dropdown__arrow">
-
+    
                         <input type="checkbox" class="dropdown__check">
                     </a>
                     <div class="dropdown__content">
@@ -84,7 +82,7 @@
                             <li class="dropdown__li">
                                 <a href="#" class="dropdown__anchor">SOCIEDAD CIENTIFICA ENTUDIANTIL</a>
                             </li>
-
+    
                         </ul>
                     </div>
                 </li>
@@ -103,98 +101,68 @@
                 </li>
             </ul>
         </nav>
-
+    
         <div>
-
+    
             <div class="modo-oscuro">
                 <!--
-                <div class="info">
-                    <ion-icon name="moon-outline"></ion-icon>
-                    <span>Drak Mode</span>
-                </div>
-                -->
-                
+                            <div class="info">
+                                <ion-icon name="moon-outline"></ion-icon>
+                                <span>Drak Mode</span>
+                            </div>
+                            -->
+            
                 <div class="switch">
                     <!--
-                    <div class="base">
-                        
-                        <div class="circulo"></div>
-                        
-                    </div>
-                -->
+                                <div class="base">
+                                    
+                                    <div class="circulo"></div>
+                                    
+                                </div>
+                            -->
                 </div>
-                
+            
             </div>
-
-
+    
+    
         </div>
-
+    
     </div>
     <!------------------------------------------------->
+    <article>
+    
+    
+        <div class="form-box">
+            <div class="form-value">
+    
+                <form action="/publicaciones/publicaciones.php" method="POST">
+                    <h2>Nueva Publicacion</h2>
+                    <div class="inputbox">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                        <input type="text" name="nombre_user" required>
+                        <label for="">Descripcion</label>
+    
+                    </div>
 
-    <!------------------------------------Mostrar las publicaciones--------------------------------------------->
+                    <div class="inputbox">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                        <input type="password" name="contrasena_user" required>
+                        <label for="">Imagen o documento</label>
+                    </div>
 
-
-
-    <section class="ppost-list">
-        <div class="pcontent">
-            <article class="ppost">
-                <div class="ppost-header">
-                    <div class="ppost-img-1"></div>
-                </div>
-
-
-                <div class="ppost-body">
-                    <span>fecha de la publiccaion</span>
-                    <h2>Este es un subtitulo de la publicacione</h2>
-                    <p class="pdescripcion">aqui ponen el texto de la base de datos</p>
-                    <a href="#" class="ppost-link">Leer mas</a>
-                </div>
-
-            </article>
-
-            <article class="ppost">
-                <div class="ppost-header">
-                    <div class="ppost-img-2"></div>
-                </div>
-
-
-                <div class="ppost-body">
-                    <span>fecha de la publiccaion</span>
-                    <h2>Este es un subtitulo de la publicacione</h2>
-                    <p class="pdescripcion">aqui ponen el texto de la base de datos</p>
-                    <a href="#" class="ppost-link">Leer mas</a>
-                </div>
-
-            </article>
-
-            <article class="ppost">
-                <div class="ppost-header">
-                    <div class="ppost-img-3"></div>
-                </div>
-
-
-                <div class="ppost-body">
-                    <span>fecha de la publiccaion</span>
-                    <h2>Este es un subtitulo de la publicacione</h2>
-                    <p class="pdescripcion">aqui ponen el texto de la base de datos</p>
-                    <a href="#" class="ppost-link">Leer mas</a>
-                </div>
-
-            </article>
+    
+                    <button type="submit" name="registro">Publicar</button>
+                </form>
+    
+            </div>
         </div>
-    </section>
-
-
-
-
-
-    <!------------------------------------------------->
+    </article>
     <!----------------SCRIPTS DE LA BARRA DESPLEGABLE---------------------->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/index//script.js"></script>
+    
     <!------------------------------------------------->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/index//script.js"></script>
 </body>
 
 </html>

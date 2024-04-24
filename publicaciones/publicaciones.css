@@ -1,4 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+/*------------------------TABLA DE PUBLICACION A LLENAR-----------------*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 350px;
+
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h2 {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+
+button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*----------------MENU DESPLEGABLE ----------------------------------------------------*/
+
 
 
 .dropdown__link {
@@ -51,24 +162,24 @@
 }
 
 :root {
-    --color-barra-lateral: rgb(44, 45, 49);
-    
-        --color-texto: rgb(255, 255, 255);
-        --color-texto-menu: rgb(110, 110, 117);
-    
-        --color-menu-hover: rgb(0, 0, 0);
-        --color-menu-hover-texto: rgb(238, 238, 238);
-    
-        --color-boton: rgb(255, 255, 255);
-        --color-boton-texto: rgb(0, 0, 0);
-    
-        --color-linea: rgb(90, 90, 90);
-    
-        --color-switch-base: rgb(39, 205, 64);
-        --color-switch-circulo: rgb(255, 255, 255);
-    
-        --color-scroll: rgb(68, 69, 74);
-        --color-scroll-hover: rgb(85, 85, 85);
+--color-barra-lateral: rgb(44, 45, 49);
+
+    --color-texto: rgb(255, 255, 255);
+    --color-texto-menu: rgb(110, 110, 117);
+
+    --color-menu-hover: rgb(0, 0, 0);
+    --color-menu-hover-texto: rgb(238, 238, 238);
+
+    --color-boton: rgb(255, 255, 255);
+    --color-boton-texto: rgb(0, 0, 0);
+
+    --color-linea: rgb(90, 90, 90);
+
+    --color-switch-base: rgb(39, 205, 64);
+    --color-switch-circulo: rgb(255, 255, 255);
+
+    --color-scroll: rgb(68, 69, 74);
+    --color-scroll-hover: rgb(85, 85, 85);
 }
 
 
@@ -80,7 +191,7 @@
 }
 
 body {
-    background-image: url('/index/img/fondo.jpg');
+    background-image: url('/index/img/fondo2.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -457,107 +568,4 @@ main.min-main {
     list-style: none;
     transition: height .4s;
     height: 0;
-}
-
-/*------------------AQUI SE PRESENTARA LOS ESTILOS PARA MOSTRAR LA PUBLICACION---------------------*/
-.ppost-list {
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 15px;
-    
-}
-
-.pcontent {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-.ppost-img-1,.ppost-img-2,.ppost-img-3{
-    background: url(/index/img/logo.png);
-    width: 100%;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    transition: .2s;
-}
-.ppost{
-    background: rgb(212, 216, 219);
-    box-shadow: 0 1px 6px 1px rgba(0,0,0, .19);
-    overflow: hidden;
-    transition: .2s;
-    border-radius: 18px;
-
-}
-
-.ppost:hover{
-    transform: translateY(-4px);
-    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .25);
-}
-
-.ppost-header{
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.ppost:hover .ppost-img1,
-.ppost:hover .ppost-img1,
-.ppost:hover .ppost-img1{
-    transform: scale(1.1);
-}
-
-.ppost-body{
-    padding: 15px;
-    text-align: center;
-}
-
-.ppost-body span{
-    display: inline-block;
-    color: rgb(161, 164, 167);
-    margin-bottom: 10px;
-}
-
-.ppost-body h2{
-    margin-bottom: 15px;
-}
-
-.ppost-bodyp{
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.ppost-body .ppost-link{
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    background: rgb(252, 243, 243);
-    color: black;
-    width: 50%;
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .15);
-    transition: .2s;
-}
-
-.ppost-body .ppost-link:hover{
-    background: #626668;
-    box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .25);
-    transform: translateY(-2px);
-
-}
-
-@media (max-width: 840px ){
-    .pcontent{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media (max-width: 600px) {
-    .pcontent {
-        grid-template-columns: repeat(1, 1fr);
-    }
 }

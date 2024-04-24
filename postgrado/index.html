@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Html Generated</title>
+  <meta name="description" content="Figma htmlGenerator">
+  <meta name="author" content="htmlGenerator">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: #E5E5E5; }
+    .hover-effect {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="e1_3">
+    <div class="e1_2"></div>
+    <div class="e0_3"></div>
+    <div class="e0_4"></div>
+    <div class="e0_5"></div>
+    <span class="e0_6 tooltip">Diseño e Implementación de Dinámicas de Grupo basados en el Enfoque de la Facilitación Integral
+      
+    </span>
+    <div class="e0_7"></div>
+    <div class="e0_8"></div>
+    <span class="e0_9">En este curso podrás conocer herramientas y estrategias para el diseño, gestión e implementación de dinámicas de grupo y rutas de aprendizaje</span>
+    <div class="e0_10 hover-effect" @mouseover="changeColor" @mouseleave="resetColor"></div>
+    <span class="e0_11">Diseño e Implementación de Dinámicas de Grupo basados en el Enfoque de la Facilitación Integral</span>
+    <div class="e0_12"></div>
+    <div class="e0_13"></div>
+    <span class="e0_14">En este curso podrás conocer herramientas y estrategias para el diseño, gestión e implementación de dinámicas de grupo y rutas de aprendizaje</span>
+    <div class="e0_15"></div>
+    <span class="e0_16">FORMACIÓN CONTINUA</span>
+    <div class="e0_17"></div>
+    <div class="e0_18"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      methods: {
+        changeColor(event) {
+          event.target.style.backgroundColor = 'lightblue';
+        },
+        resetColor(event) {
+          event.target.style.backgroundColor = '';
+        }
+      }
+    });
+  </script>
+</body>
+</html>

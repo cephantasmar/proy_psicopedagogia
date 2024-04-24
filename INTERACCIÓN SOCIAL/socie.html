@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa "Sembrando semillas de paz"</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        .image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .caption {
+            padding: 10px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .section {
+            position: relative;
+            height: calc(100vh / 3); /* Una tercera parte de la altura de la pantalla */
+             /* Para que el texto no se desborde */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('img/enp.jpg'); /* Ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Difuminado de la imagen */
+        }
+
+        .text-container {
+            font-size: 2em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="section">
+    <div class="background-image"></div>
+    <div class="text-container">
+        <h1>Inpsicopedia </h1>
+            
+    </div>
+</div>
+    <div class="container">
+        <h2>actividades </h2>
+        <div class="gallery">
+            <div class="image">
+                <img src="img/im1.jpg" alt="Imagen 1">
+                <div class="caption">Descripción de la Imagen 1</div>
+            </div>
+            <div class="image">
+                <img src="img/im2.jpg" alt="Imagen 2">
+                <div class="caption">Descripción de la Imagen 2</div>
+            </div>
+            <div class="image">
+                <img src="img/im3.jpg" alt="Imagen 3">
+                <div class="caption">Descripción de la Imagen 3</div>
+            </div>
+            <div class="image">
+                <img src="img/im4.jpg" alt="Imagen 4">
+                <div class="caption">Descripción de la Imagen 4</div>
+            </div>
+            <div class="image">
+                <img src="img/img5.jpg" alt="Imagen 5">
+                <div class="caption">Descripción de la Imagen 5</div>
+            </div>
+            <!-- Agrega más elementos 'image' según sea necesario -->
+        </div>
+    </div>
+
+</body>
+</html>

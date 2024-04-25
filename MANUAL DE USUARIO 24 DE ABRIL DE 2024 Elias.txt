@@ -1,0 +1,6 @@
+MANUAL DE USUARIO
+1. En barra lateral que es el "Menu" para aceder a las diferentes tipos de pestanas de la pagina web, se podra encontrar un icono de "+" que es la creacion de una publicacion.
+2. Cuando se hace click en "Crear publicacion" le lleva a una pestana que le pide ciertos datos a mandar a la BBDD (Base de Datos).
+3. Despues de hacer click en "Publicar" se lleva esa informacion a la parte del "index" donde se separar en las tarjetas creadas para ese apartado con el fin de mostrar la publicacion reciente.
+4. En el boton "Leer mas" se encuentra la informacion con mas detalle de la publicacion subido al sitio web.
+5. Dentro de la pestana "Leer mas" se encuantra un boton con un icono de "Casa" que tiene la funcionalidad de llevar al usuario al index original o principal. 

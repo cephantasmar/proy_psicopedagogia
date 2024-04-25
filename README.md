@@ -21,3 +21,5 @@ SE ENTABLO UNA CONEXION CON UNA BASE DE DATOS EN MONGODB, IMPORTANDO LA LIBRERIA
 INSTANCIANDO EXPRESS (app) PARA PODER USAR SUS FUNCIONES. 
 Y USARLAS PARA GENEAR UN TIPO CRUD.
 - Cesar: Se desarrollo el ruteo en la barra de navegación. Para esto se uso vue-router.
+- Jean: Se desarrollo la pagina Login para el administrador, se realizo con vue.js. Tambien se añadio el contacto.
+

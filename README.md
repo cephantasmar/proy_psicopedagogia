@@ -22,4 +22,13 @@ INSTANCIANDO EXPRESS (app) PARA PODER USAR SUS FUNCIONES.
 Y USARLAS PARA GENEAR UN TIPO CRUD.
 - Cesar: Se desarrollo el ruteo en la barra de navegación. Para esto se uso vue-router.
 - Jean: Se desarrollo la pagina Login para el administrador, se realizo con vue.js. Tambien se añadio el contacto.
+- Alan: En el nuevo avance instanciaremos la conexion de la base de datos con el Mongoose el cual nos permitira
+atraves del vue importanto las librerias adecuadas del mismo junto a express hacer una modificacion a la 
+base de datos de la pagina web:
+Tenemos funciones especificas que nos ayudaran en los siguientes puntos:  
 
+- Crear un nuevo usuario (POST en /usuarios)
+- Obtener todos los usuarios (GET en /usuarios)
+- Obtener un usuario por su ID (GET en /usuarios/:id)
+- Actualizar un usuario existente (PUT en /usuarios/:id)
+- Eliminar un usuario (DELETE en /usuarios/:id)

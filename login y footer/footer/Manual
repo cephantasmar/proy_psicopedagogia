@@ -1,0 +1,10 @@
+Footer
+el manual es el siguiente
+1. se colocara primeramente en el powershell los comando para poder crear un proyecto en vue 
+2. se realizo un nuevo componente que se llamara ContactPage.vue y ContactFooter (Este es el importante) que se muestren el codigo
+3. se realizo el templete en base de form grupal en el caso del ContactPage y en el Contactfooter se realizo con en una pagina particular pero se creo un ffooter en vue separado para que despues se lo llame despues cualquier pagina.vue 
+4. se realizo una referencia que va a las redes sociales en base del href para facebook, x e instagram
+5. se realizo despues los metodos que solo como se llama el footer
+6. se coloco styles para su diseño estetico
+7. se coloco el componente para que se visualice en la pagina
+8. se dio a correr para se vaya a la localhost:8081 con npm run serve

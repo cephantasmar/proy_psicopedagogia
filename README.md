@@ -16,6 +16,8 @@ con una BBDD (Base de Datos) para el transporte de informacion o datos enviados 
 (parte de la cual no soy participe). En este tipo de avance se empleo el uso de HTML,
 CSS y JAVASCRIPT donde no se vio mayor complejidad para el empleo de otras alternativas para mayor
 efectibilidad, como el uso de REACT o VUE.
-- Ramiro: SE ENTABLO UNA CONEXION CON UNA BASE DE DATOS EN MONGODB, IMPORTANDO LA LIBRERIA MONGOOS E
- INSTANCIANDO EXPRESS (app) PARA PODER USAR SUS FUNCIONES. 
+- Ramiro:
+SE ENTABLO UNA CONEXION CON UNA BASE DE DATOS EN MONGODB, IMPORTANDO LA LIBRERIA MONGOOS E
+INSTANCIANDO EXPRESS (app) PARA PODER USAR SUS FUNCIONES. 
 Y USARLAS PARA GENEAR UN TIPO CRUD.
+- Cesar: Se desarrollo el ruteo en la barra de navegación. Para esto se uso vue-router.

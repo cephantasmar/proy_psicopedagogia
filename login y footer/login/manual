@@ -1,0 +1,10 @@
+login
+el manual es el siguiente
+1. se colocara primeramente en el powershell los comando para poder crear un proyecto en vue 
+2. se realizo un nuevo componente que se llamara LoginForm.vue que se muestra el codigo
+3. se realizo el templete en base de form y ids 
+4. se realizo el script los datos que se mostran como un usuario y la contraseña
+5. se realizo despues los metodos que se igualar los datos del usuario y contraseña sean igual si se realiza eso entrara la nueva pagina
+6. se coloco styles para su diseño estetico
+7. se coloco el componente para que se visualice en la pagina
+8. se dio a correr para se vaya a la localhost:8082 con npm run serve

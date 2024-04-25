@@ -7,3 +7,5 @@
 -Alan Ivan Marquez Ancasi
 
 -Ramiro Ariel Quenta Ramos
+
+## AVANCES SEGUNDA PRESENTACIÓN

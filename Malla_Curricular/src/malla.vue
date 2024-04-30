@@ -13,9 +13,8 @@
           </router-link>
         </div>
       </div>
-      <router-view></router-view>
-      <div v-if="recuadroVisible" class="contenedor-relativo">
-        <div class="recuadro-flotante">
+      <div class="contenedor-detalle">
+        <div v-if="recuadroVisible" class="recuadro-flotante">
           <h3>{{ recuadroContenido.nombre }}</h3>
           <p>{{ recuadroContenido.descripcion }}</p>
           <ul v-if="recuadroContenido.materias">
@@ -25,8 +24,8 @@
             </li>
           </ul>
         </div>
+        <DetalleMateria1 v-if="detalleMateria1Visible" class="detalle-materia" />
       </div>
-      <DetalleMateria1 v-if="detalleMateria1Visible" />
     </main>
   </div>
 </template>
@@ -62,6 +61,7 @@ export default {
       if (semestre.id === 1) {
         this.recuadroContenido = semestre;
         this.recuadroVisible = true;
+        this.detalleMateria1Visible = false; 
       } else {
         this.recuadroVisible = false;
       }
@@ -134,22 +134,17 @@ h2 {
   background-color: #5170d3;
 }
 
-.contenedor-relativo {
-  position: relative;
+.contenedor-detalle {
+  display: flex;
 }
 
 .recuadro-flotante {
-  position: absolute;
+  position: relative;
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
-  z-index: 999;
-  top: calc(100% + 20px);
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 400px;
-  text-align: left;
+  margin-right: 20px; /* Margen para separar del detalle de materia */
   font-size: 14px;
 }
 

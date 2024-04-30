@@ -20,7 +20,7 @@
           <p>{{ recuadroContenido.descripcion }}</p>
           <ul v-if="recuadroContenido.materias">
             <li v-for="materia in recuadroContenido.materias" :key="materia">
-              <span v-if="materia === 'Materia 1'" @click="mostrarDetalleMateria1">{{ materia }}</span>
+              <span v-if="materia === 'Psicopedagogia'" @click="mostrarDetalleMateria1">{{ materia }}</span>
               <span v-else>{{ materia }}</span>
             </li>
           </ul>
@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       semestres: [
-        { id: 1, nombre: 'Primer Semestre', descripcion: 'Este es el primer semestre del plan de estudios. Incluye asignaturas introductorias.', materias: ['Materia 1', 'Materia 2', 'Materia 3'] },
+        { id: 1, nombre: 'Primer Semestre', descripcion: 'Este es el primer semestre del plan de estudios. Incluye asignaturas introductorias.', materias: ['Psicopedagogia', 'Modelos Pedagógicos en elTiempo y la Actualidad', 'Aprender a Aprende', 'Psicofisiología', 'Antropología Cultural de la Identidad', 'Escritura Académica'] },
         { id: 2, nombre: 'Segundo Semestre', descripcion: 'Este es el segundo semestre del plan de estudios. Continúa con asignaturas básicas.' },
         { id: 3, nombre: 'Tercer Semestre', descripcion: 'Este es el tercer semestre del plan de estudios. Se enfoca en asignaturas intermedias.' },
         { id: 4, nombre: 'Cuarto Semestre', descripcion: 'Este es el cuarto semestre del plan de estudios. Se profundiza en áreas específicas.' },

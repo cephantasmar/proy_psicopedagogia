@@ -10,12 +10,15 @@
         <div class="columnas">
           <div class="columna" v-for="(columna, index) in columnas" :key="index">
             <div class="semestres">
-              <router-link v-for="semestre in columna" :key="semestre.id" :to="'/semestre/' + semestre.id" class="semestre">
+              <router-link v-for="semestre in columna" :key="semestre.id" :to="'/semestre/' + semestre.id" class="semestre" @mouseover="mostrarRecuadro(semestre.descripcion)" @mouseleave="ocultarRecuadro">
                 {{ semestre.nombre }}
               </router-link>
             </div>
           </div>
         </div>
+      </div>
+      <div v-if="recuadroVisible" class="recuadro-flotante">
+        <p>{{ recuadroContenido }}</p>
       </div>
       <router-view></router-view>
     </main>
@@ -28,16 +31,18 @@ export default {
   data() {
     return {
       semestres: [
-        { id: 1, nombre: 'Primer Semestre' },
-        { id: 2, nombre: 'Segundo Semestre' },
-        { id: 3, nombre: 'Tercer Semestre' },
-        { id: 4, nombre: 'Cuarto Semestre' },
-        { id: 5, nombre: 'Quinto Semestre' },
-        { id: 6, nombre: 'Sexto Semestre' },
-        { id: 7, nombre: 'Septimo Semestre' },
-        { id: 8, nombre: 'Octavo Semestre' },
-        { id: 9, nombre: 'Noveno Semestre' },
-      ]
+        { id: 1, nombre: 'Primer Semestre', descripcion: 'Este es el primer semestre del plan de estudios. Incluye asignaturas introductorias.' },
+        { id: 2, nombre: 'Segundo Semestre', descripcion: 'Este es el segundo semestre del plan de estudios. Continúa con asignaturas básicas.' },
+        { id: 3, nombre: 'Tercer Semestre', descripcion: 'Este es el tercer semestre del plan de estudios. Se enfoca en asignaturas intermedias.' },
+        { id: 4, nombre: 'Cuarto Semestre', descripcion: 'Este es el cuarto semestre del plan de estudios. Se profundiza en áreas específicas.' },
+        { id: 5, nombre: 'Quinto Semestre', descripcion: 'Este es el quinto semestre del plan de estudios. Incluye asignaturas optativas.' },
+        { id: 6, nombre: 'Sexto Semestre', descripcion: 'Este es el sexto semestre del plan de estudios. Se enfoca en proyectos o prácticas profesionales.' },
+        { id: 7, nombre: 'Septimo Semestre', descripcion: 'Este es el séptimo semestre del plan de estudios. Continúa con proyectos o prácticas profesionales.' },
+        { id: 8, nombre: 'Octavo Semestre', descripcion: 'Este es el octavo semestre del plan de estudios. Se prepara para la culminación de la carrera.' },
+        { id: 9, nombre: 'Noveno Semestre', descripcion: 'Este es el noveno semestre del plan de estudios. Incluye trabajo de grado o proyecto final.' },
+      ],
+      recuadroVisible: false,
+      recuadroContenido: ''
     };
   },
   computed: {
@@ -50,13 +55,19 @@ export default {
       return columnas;
     }
   },
-  created() {
+  methods: {
+    mostrarRecuadro(contenido) {
+      this.recuadroContenido = contenido;
+      this.recuadroVisible = true;
+    },
+    ocultarRecuadro() {
+      this.recuadroVisible = false;
+    }
   }
 };
 </script>
 
 <style scoped>
-
 body {
   font-family: Arial, sans-serif;
   background-color: #FFD700; 
@@ -124,5 +135,20 @@ h2 {
 
 .semestre:hover {
   background-color: #5170d3;
+}
+
+.recuadro-flotante {
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  text-align: left;
+  font-size: 14px;
 }
 </style>

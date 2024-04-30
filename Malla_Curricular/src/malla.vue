@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <header>
-      <img src="/assets/logop.png" alt="Logo" class="logo">
-      <h1>Malla Curricular</h1>
+      <div class="logo-container">
+        <img src="./assets/logop.png" alt="Logo" class="logo">
+      </div>
+      <div class="header-content">
+        <h1>Malla Curricular</h1>
+        <p>Explora nuestra oferta académica</p>
+      </div>
     </header>
     <main>
       <div class="malla-curricular">
@@ -61,7 +66,7 @@ export default {
       if (semestre.id === 1) {
         this.recuadroContenido = semestre;
         this.recuadroVisible = true;
-        this.detalleMateria1Visible = false; 
+        this.detalleMateria1Visible = false; // Ocultar detalle de materia al mostrar el recuadro del semestre
       } else {
         this.recuadroVisible = false;
       }
@@ -74,30 +79,49 @@ export default {
 </script>
 
 <style scoped>
+/* Estilos previos */
 body {
   font-family: Arial, sans-serif;
   background-color: #FFD700; 
 }
 
+/* Estilos para el encabezado */
 header {
-  background-color: #f09c64;
-  color: #000000;
+  background: linear-gradient(45deg, #ffcc00, #ff7300);
+  color: #fff;
   padding: 20px 0;
-  text-align: center;
   display: flex;
   align-items: center;
 }
 
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+.logo-container {
+  margin-right: 40px; /* Ajusta la separación del logo del margen izquierdo */
+  margin-left: 40px; /* Mueve el logo hacia la derecha */
 }
+
+.logo {
+  width: 180px; /* Ajusta el tamaño del logo */
+  height: auto;
+}
+
+.header-content {
+  flex-grow: 1;
+  text-align: center; /* Centra el contenido */
+  width: calc(100% - 250px); /* Ancho del contenedor menos el ancho del logo más el margen */
+  margin-left: -300px; /* Margen izquierdo negativo para ajustar el título */
+}
+
 
 header h1 {
   margin: 0;
+  font-size: 32px;
 }
 
+header p {
+  margin: 5px 0 0;
+}
+
+/* Estilos para el resto del contenido */
 main {
   padding: 20px;
 }
@@ -122,7 +146,7 @@ h2 {
 
 .semestre {
   background-color: #0565f5;
-  color: #00ff2a;
+  color: #fff;
   border-radius: 10px;
   padding: 20px;
   cursor: pointer;
@@ -134,27 +158,37 @@ h2 {
   background-color: #5170d3;
 }
 
+/* Estilos para el contenedor de detalle */
 .contenedor-detalle {
   display: flex;
 }
 
+/* Estilos para el recuadro flotante */
 .recuadro-flotante {
   position: relative;
-  background-color: #ffffff;
+  background-color: #f9fafb;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
-  margin-right: 20px; /* Margen para separar del detalle de materia */
+  margin-right: 20px; 
   font-size: 14px;
 }
 
+.recuadro-flotante h3 {
+  color: #0565f5;
+}
+
+.recuadro-flotante p {
+  color: #333;
+}
+
+/* Estilos para el detalle de materia */
 .detalle-materia {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
-  max-width: 400px;
-  text-align: left;
   font-size: 14px;
+  max-width: 400px;
 }
 </style>

@@ -47,14 +47,14 @@ export default {
     return {
       semestres: [
         { id: 1, nombre: 'Primer Semestre', descripcion: 'Este es el primer semestre del plan de estudios. Incluye asignaturas introductorias.', materias: ['Psicopedagogia', 'Modelos Pedagógicos en elTiempo y la Actualidad', 'Aprender a Aprende', 'Psicofisiología', 'Antropología Cultural de la Identidad', 'Escritura Académica'] },
-        { id: 2, nombre: 'Segundo Semestre', descripcion: 'Este es el segundo semestre del plan de estudios. Continúa con asignaturas básicas.' },
-        { id: 3, nombre: 'Tercer Semestre', descripcion: 'Este es el tercer semestre del plan de estudios. Se enfoca en asignaturas intermedias.' },
-        { id: 4, nombre: 'Cuarto Semestre', descripcion: 'Este es el cuarto semestre del plan de estudios. Se profundiza en áreas específicas.' },
-        { id: 5, nombre: 'Quinto Semestre', descripcion: 'Este es el quinto semestre del plan de estudios. Incluye asignaturas optativas.' },
-        { id: 6, nombre: 'Sexto Semestre', descripcion: 'Este es el sexto semestre del plan de estudios. Se enfoca en proyectos o prácticas profesionales.' },
-        { id: 7, nombre: 'Séptimo Semestre', descripcion: 'Este es el séptimo semestre del plan de estudios. Continúa con proyectos o prácticas profesionales.' },
-        { id: 8, nombre: 'Octavo Semestre', descripcion: 'Este es el octavo semestre del plan de estudios. Se prepara para la culminación de la carrera.' },
-        { id: 9, nombre: 'Noveno Semestre', descripcion: 'Este es el noveno semestre del plan de estudios. Incluye trabajo de grado o proyecto final.' }
+        { id: 2, nombre: 'Segundo Semestre', descripcion: 'Este es el segundo semestre del plan de estudios. Continúa con asignaturas básicas.', materias: ['Psicología del Desarrollo Infantil','Taller de Psicología del Desarrollo Infantil','Didáctica Formal y No Formal','Psicobiología y Neurociencia','Desarrollo Personal y Creativo','Psicoestadística','Psicología Educativa y del Aprendizaje'] },
+        { id: 3, nombre: 'Tercer Semestre', descripcion: 'Este es el tercer semestre del plan de estudios. Se enfoca en asignaturas intermedias.', materias:['Psicología del Desarrollo del Adolescente y Adulto','Taller de Psicología del Desarrollo del Adolescente y Adulto ','Taller de Tecnologías de la Información y Comunicación','Didácticas Especificas','Elaboración y Validación de Instrumentos de Medición','Psicología Cognitiva','Formación Humano Cristiana I'] },
+        { id: 4, nombre: 'Cuarto Semestre', descripcion: 'Este es el cuarto semestre del plan de estudios. Se profundiza en áreas específicas.', materias:['Procesos Cognitivos en Educación','Gestión de Aula e Inteligencia Emocional','Educación y Tecnología','Medición en Psicología (Taller)','Técnicas de Evaluación Psicopedagógica','Investigación Cuantitativa','Educación Inclusiva']},
+        { id: 5, nombre: 'Quinto Semestre', descripcion: 'Este es el quinto semestre del plan de estudios. Incluye asignaturas optativas.', materias:['Diseño Curricular I','Aprendizaje en Entornos Virtuales','Intervención Psicoped en Necesidades Educativas','Diagnósticos Psicopedagógicos','Diagnóstico de Necesidades de Formación Social','Educacion en la Diversidad','Educacion Cualitativa']},
+        { id: 6, nombre: 'Sexto Semestre', descripcion: 'Este es el sexto semestre del plan de estudios. Se enfoca en proyectos o prácticas profesionales.', materias:['Producción de Recursos Psicopedagógicos','Diseño Curricular II','Proyectos Psicopedagógicos Institucionales','Intervención Psicoped. en Dificultades del Aprendizaje','Investigación Acción','Formación Humano Cristiana II','Libre I']},
+        { id: 7, nombre: 'Séptimo Semestre', descripcion: 'Este es el séptimo semestre del plan de estudios. Continúa con proyectos o prácticas profesionales.', materias:['Evaluación Educativa','Intervención Psicoped. en Dificultades Específicas del Aprendizaje','Psicopedagogía Laboral','Intervención Psicoped. en Contextos de Vulnerabilidad','Práctica Preprofesional I','Formación Humano Cristiana III','Enseñar a Aprender']},
+        { id: 8, nombre: 'Octavo Semestre', descripcion: 'Este es el octavo semestre del plan de estudios. Se prepara para la culminación de la carrera.', materias:['Intervención en Familia y Comunidad','Gestión del Aprendizaje en Contexto Laboral','Práctica Preprofesional II','Taller de Investigación de Grado I','Libre II','Orientación Profesional']},
+        { id: 9, nombre: 'Noveno Semestre', descripcion: 'Este es el noveno semestre del plan de estudios. Incluye trabajo de grado o proyecto final.', materias:['Taller de Investigación de Grado II']}
       ],
       recuadroVisible: false,
       recuadroContenido: null,
@@ -63,13 +63,9 @@ export default {
   },
   methods: {
     mostrarRecuadro(semestre) {
-      if (semestre.id === 1) {
-        this.recuadroContenido = semestre;
-        this.recuadroVisible = true;
-        this.detalleMateria1Visible = false; // Ocultar detalle de materia al mostrar el recuadro del semestre
-      } else {
-        this.recuadroVisible = false;
-      }
+      this.recuadroContenido = semestre;
+      this.recuadroVisible = true;
+      this.detalleMateria1Visible = false; // Ocultar detalle de materia al mostrar el recuadro del semestre
     },
     mostrarDetalleMateria1() {
       this.detalleMateria1Visible = true;
@@ -79,13 +75,11 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos previos */
 body {
   font-family: Arial, sans-serif;
   background-color: #FFD700; 
 }
 
-/* Estilos para el encabezado */
 header {
   background: linear-gradient(45deg, #ffcc00, #ff7300);
   color: #fff;
@@ -95,22 +89,21 @@ header {
 }
 
 .logo-container {
-  margin-right: 40px; /* Ajusta la separación del logo del margen izquierdo */
-  margin-left: 40px; /* Mueve el logo hacia la derecha */
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 .logo {
-  width: 180px; /* Ajusta el tamaño del logo */
+  width: 180px;
   height: auto;
 }
 
 .header-content {
   flex-grow: 1;
-  text-align: center; /* Centra el contenido */
-  width: calc(100% - 250px); /* Ancho del contenedor menos el ancho del logo más el margen */
-  margin-left: -300px; /* Margen izquierdo negativo para ajustar el título */
+  text-align: center;
+  width: calc(100% - 250px);
+  margin-left: -300px;
 }
-
 
 header h1 {
   margin: 0;
@@ -121,7 +114,6 @@ header p {
   margin: 5px 0 0;
 }
 
-/* Estilos para el resto del contenido */
 main {
   padding: 20px;
 }
@@ -158,12 +150,10 @@ h2 {
   background-color: #5170d3;
 }
 
-/* Estilos para el contenedor de detalle */
 .contenedor-detalle {
   display: flex;
 }
 
-/* Estilos para el recuadro flotante */
 .recuadro-flotante {
   position: relative;
   background-color: #f9fafb;
@@ -182,7 +172,6 @@ h2 {
   color: #333;
 }
 
-/* Estilos para el detalle de materia */
 .detalle-materia {
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

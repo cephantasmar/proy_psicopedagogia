@@ -7,61 +7,67 @@
     <main>
       <div class="malla-curricular">
         <h2>Anexo de Semestres</h2>
-        <div class="columnas">
-          <div class="columna" v-for="(columna, index) in columnas" :key="index">
-            <div class="semestres">
-              <router-link v-for="semestre in columna" :key="semestre.id" :to="'/semestre/' + semestre.id" class="semestre" @mouseover="mostrarRecuadro(semestre.descripcion)" @mouseleave="ocultarRecuadro">
-                {{ semestre.nombre }}
-              </router-link>
-            </div>
-          </div>
+        <div class="semestres-grid">
+          <router-link v-for="semestre in semestres" :key="semestre.id" :to="'/semestre/' + semestre.id" class="semestre" @click="mostrarRecuadro(semestre)">
+            {{ semestre.nombre }}
+          </router-link>
         </div>
       </div>
-      <div v-if="recuadroVisible" class="recuadro-flotante">
-        <p>{{ recuadroContenido }}</p>
-      </div>
       <router-view></router-view>
+      <div v-if="recuadroVisible" class="contenedor-relativo">
+        <div class="recuadro-flotante">
+          <h3>{{ recuadroContenido.nombre }}</h3>
+          <p>{{ recuadroContenido.descripcion }}</p>
+          <ul v-if="recuadroContenido.materias">
+            <li v-for="materia in recuadroContenido.materias" :key="materia">
+              <span v-if="materia === 'Materia 1'" @click="mostrarDetalleMateria1">{{ materia }}</span>
+              <span v-else>{{ materia }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <DetalleMateria1 v-if="detalleMateria1Visible" />
     </main>
   </div>
 </template>
 
 <script>
+import DetalleMateria1 from './components/DetalleMateria1.vue';
+
 export default {
   name: 'App',
+  components: {
+    DetalleMateria1
+  },
   data() {
     return {
       semestres: [
-        { id: 1, nombre: 'Primer Semestre', descripcion: 'Este es el primer semestre del plan de estudios. Incluye asignaturas introductorias.' },
+        { id: 1, nombre: 'Primer Semestre', descripcion: 'Este es el primer semestre del plan de estudios. Incluye asignaturas introductorias.', materias: ['Materia 1', 'Materia 2', 'Materia 3'] },
         { id: 2, nombre: 'Segundo Semestre', descripcion: 'Este es el segundo semestre del plan de estudios. Continúa con asignaturas básicas.' },
         { id: 3, nombre: 'Tercer Semestre', descripcion: 'Este es el tercer semestre del plan de estudios. Se enfoca en asignaturas intermedias.' },
         { id: 4, nombre: 'Cuarto Semestre', descripcion: 'Este es el cuarto semestre del plan de estudios. Se profundiza en áreas específicas.' },
         { id: 5, nombre: 'Quinto Semestre', descripcion: 'Este es el quinto semestre del plan de estudios. Incluye asignaturas optativas.' },
         { id: 6, nombre: 'Sexto Semestre', descripcion: 'Este es el sexto semestre del plan de estudios. Se enfoca en proyectos o prácticas profesionales.' },
-        { id: 7, nombre: 'Septimo Semestre', descripcion: 'Este es el séptimo semestre del plan de estudios. Continúa con proyectos o prácticas profesionales.' },
+        { id: 7, nombre: 'Séptimo Semestre', descripcion: 'Este es el séptimo semestre del plan de estudios. Continúa con proyectos o prácticas profesionales.' },
         { id: 8, nombre: 'Octavo Semestre', descripcion: 'Este es el octavo semestre del plan de estudios. Se prepara para la culminación de la carrera.' },
-        { id: 9, nombre: 'Noveno Semestre', descripcion: 'Este es el noveno semestre del plan de estudios. Incluye trabajo de grado o proyecto final.' },
+        { id: 9, nombre: 'Noveno Semestre', descripcion: 'Este es el noveno semestre del plan de estudios. Incluye trabajo de grado o proyecto final.' }
       ],
       recuadroVisible: false,
-      recuadroContenido: ''
+      recuadroContenido: null,
+      detalleMateria1Visible: false
     };
   },
-  computed: {
-    columnas() {
-      const columnas = [[], [], []];
-      this.semestres.forEach((semestre, index) => {
-        const columnaIndex = index % 3;
-        columnas[columnaIndex].push(semestre);
-      });
-      return columnas;
-    }
-  },
   methods: {
-    mostrarRecuadro(contenido) {
-      this.recuadroContenido = contenido;
-      this.recuadroVisible = true;
+    mostrarRecuadro(semestre) {
+      if (semestre.id === 1) {
+        this.recuadroContenido = semestre;
+        this.recuadroVisible = true;
+      } else {
+        this.recuadroVisible = false;
+      }
     },
-    ocultarRecuadro() {
-      this.recuadroVisible = false;
+    mostrarDetalleMateria1() {
+      this.detalleMateria1Visible = true;
     }
   }
 };
@@ -108,26 +114,17 @@ h2 {
   margin-bottom: 20px;
 }
 
-.columnas {
-  display: flex;
-  gap: 20px; 
-}
-
-.columna {
-  flex: 1;
-}
-
-.semestres {
-  display: flex;
-  flex-direction: column;
+.semestres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .semestre {
   background-color: #0565f5;
   color: #00ff2a;
-  border-radius: 10px; 
+  border-radius: 10px;
   padding: 20px;
-  margin-bottom: 20px; 
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
@@ -137,6 +134,10 @@ h2 {
   background-color: #5170d3;
 }
 
+.contenedor-relativo {
+  position: relative;
+}
+
 .recuadro-flotante {
   position: absolute;
   background-color: #ffffff;
@@ -144,9 +145,19 @@ h2 {
   border-radius: 10px;
   padding: 20px;
   z-index: 999;
-  top: 50%;
+  top: calc(100% + 20px);
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  max-width: 400px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.detalle-materia {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
   max-width: 400px;
   text-align: left;
   font-size: 14px;

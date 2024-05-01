@@ -7,6 +7,8 @@
 -Alan Ivan Marquez Ancasi
 
 -Ramiro Ariel Quenta Ramos
+## AVANCES TERCERA PRESENTACIÓN
+Para esta presentación se conecto el backend con el frontend. Especificamente se conecto la base de datos con la validación del login. Tambien se añadieron paginas nuevas y modificaciones en el diseño.
 
 ## AVANCES SEGUNDA PRESENTACIÓN
 - Elias: 

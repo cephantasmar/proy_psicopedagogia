@@ -4,11 +4,10 @@
         <h1>SOCIEDAD CIENTIFICA ESTUDIANTIL</h1>
     </header>
     <nav class="navigation">
-        <router-link class="nav-item left" to="/grupoSC">DATA DEL GRUPO</router-link>
+        <router-link class="nav-item left" to="/grupoSC">DATA DEL GRUPO Y CONTACTOS</router-link>
         <router-link class="nav-item right" to="/EXISTENCIASC">¿DESDE CUANDO EXISTE EL GRUPO?</router-link>
         <router-link class="nav-item left" to="/ACCIONSC">ACCIONES INVESTIGATIVAS</router-link>
-        <router-link class="nav-item right" to="/CONTACTOSSC">DATOS DEL CONTACTO</router-link>
-        <router-link class="nav-item left" to="/INVESTIGACIONSC">PRESENTE INVESTIGACION</router-link>
+        <router-link class="nav-item right" to="/INVESTIGACIONSC">PRESENTE INVESTIGACION</router-link>
     </nav>
 </template>
 <style scoped>
@@ -49,7 +48,7 @@ header h1{
          background-color: #027FEB;
          color: white;
          text-decoration: none;
-         border-radius: 5px;
+         border-radius: 50px;
          margin: 5px 0; 
          transition: background-color 0.3s ease;
      }

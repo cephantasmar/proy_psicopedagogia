@@ -10,14 +10,14 @@
             explorando las prácticas y estrategias psicopedagógicas que promueven un ambiente educativo inclusivo para todos los estudiantes, 
             especialmente aquellos con necesidades especiales.
           </li>
-          <img class="banner" id="bannersoc1" src="../assets/logo.png">
+          <img class="banner" id="bannersoc1" src="../assets/ZASC/img6.jpeg">
       </a>
       <a class="nav-item right">Evaluación de Programas de Intervención Psicopedagógica:
           <li>
             La sociedad científica ha evaluado la efectividad de diferentes programas de intervención psicopedagógica diseñados para abordar dificultades específicas de aprendizaje 
             y promover el desarrollo integral de los estudiantes.
           </li>
-          <img class="banner" id="bannersoc1" src="../assets/logo.png">
+          <img class="banner" id="bannersoc1" src="../assets/ZASC/img7.jpeg">
         </a>
   </nav>
 </template>
@@ -70,7 +70,8 @@
         transition: background-color 0.3s ease;
         width: 100%; 
         max-width: 800px; 
-        text-align: left; 
+        text-align: left;
+        position: relative; 
     }
 
     .navigation .nav-item {
@@ -87,6 +88,12 @@
     }
     .nav-item:hover {
         background-color: #c96916;
+    }
+    .banner {
+        max-width: 500px; 
+        height: auto;
+        display: block; 
+        margin: 0 auto; 
     }
 
 </style>

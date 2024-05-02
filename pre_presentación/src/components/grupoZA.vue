@@ -10,7 +10,7 @@
             el grupo aborda temas clave como el desarrollo cognitivo, el aprendizaje, 
             la orientación educativa, y la intervención psicopedagógica.
           </li>
-          <img class="banner" id="bannersoc1" src="../assets/logo.png">
+          <img class="banner" id="bannersoc1" src="../assets/ZASC/img9.jpeg">
       </a>
       <a class="nav-item right">DISEÑO CENTRADO EN EL USUARIO
           <li>
@@ -19,7 +19,7 @@
             que el diseño sea atractivo y fácil de usar, y que se incluyan características como foros de discusión, 
             secciones de preguntas frecuentes y enlaces a recursos útiles relacionados con la psicopedagogía.
           </li>
-          <img class="banner" id="bannersoc1" src="../assets/logo.png">
+          <img class="banner" id="bannersoc1" src="../assets/ZASC/img10.jpg">
       </a>
       <a class="nav-item left">ACCESIBILIDAD Y COMPATIBILIDAD
           <li>
@@ -27,8 +27,25 @@
             Además, debe ser compatible con una variedad de dispositivos y navegadores web para garantizar que los estudiantes puedan acceder al contenido desde cualquier lugar y en cualquier momento, 
             ya sea desde una computadora de escritorio, una tableta o un teléfono móvil.
           </li>
-            <img class="banner" id="bannersoc1" src="../assets/logo.png">
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img11.jpeg">
       </a>
+      <h1 class="centrado">CONTACTO</h1>
+      <a class="nav-item right">
+            <li>
+              Para obtener más información sobre la Zona de Aprendizaje y establecer contacto con el equipo responsable, 
+            puedes dirigirte a la dirección física de la institución ubicada en [DIRECCIÓN calle 2 de obrajes]. Además, 
+            puedes comunicarte a través de correo electrónico a [ucb.edu.bo] o por teléfono al [6743123].
+            </li>
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img12.jpeg">
+        </a>
+        <a class="nav-item left">
+            <li>
+              El equipo de la Zona de Aprendizaje está disponible para atender consultas, proporcionar detalles sobre sus programas y servicios, 
+              así como para colaborar en proyectos educativos y de investigación relacionados con la psicopedagogía y el aprendizaje. 
+              No dudes en ponerte en contacto con ellos para obtener asesoramiento y apoyo en tus iniciativas educativas.
+            </li>
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img13.jpeg">
+          </a>
   </nav>
 </template>
 
@@ -75,12 +92,13 @@
         background-color: #ABCB3C;
         color: white;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 50px;
         margin: 5px 0;
         transition: background-color 0.3s ease;
         width: 100%; 
         max-width: 800px; 
-        text-align: left; 
+        text-align: left;
+        position: relative; 
     }
 
     .navigation .nav-item {
@@ -98,5 +116,16 @@
     .nav-item:hover {
         background-color: #86a029;
     }
-
+    .centrado {
+        font-size: 3em; 
+        text-align: center; 
+        color: white;
+        margin: 0 auto;
+    }
+    .banner {
+        max-width: 500px; 
+        height: auto;
+        display: block; 
+        margin: 0 auto; 
+    }
 </style>

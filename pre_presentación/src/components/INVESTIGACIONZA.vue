@@ -11,7 +11,7 @@
                 el aprendizaje colaborativo y el aprendizaje experiencial, 
                 influye en el rendimiento académico de los estudiantes de psicopedagogía.
             </li>
-            <img class="banner" id="bannersoc1" src="../assets/logo.png">
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img14.jpeg">
         </a>
         <a class="nav-item right">
             <li>
@@ -19,7 +19,7 @@
                 tienen un impacto positivo en su aprendizaje y desempeño académico. Para ello, 
                 se llevó a cabo un estudio longitudinal que comparó el rendimiento de dos grupos de estudiantes de psicopedagogía: uno que recibió instrucción tradicional y otro que participó en actividades de aprendizaje activo a lo largo del semestre.
             </li>
-            <img class="banner" id="bannersoc1" src="../assets/logo.png">
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img15.jpg">
           </a>
           <a class="nav-item left">
             <li>
@@ -27,7 +27,7 @@
                 una comprensión más profunda de los conceptos y un mejor rendimiento en las evaluaciones académicas en comparación con el grupo de control. 
                 Estos hallazgos sugieren que la implementación de técnicas de aprendizaje activo puede ser una estrategia efectiva para mejorar el proceso de enseñanza y aprendizaje en el ámbito de la psicopedagogía.
             </li>
-            <img class="banner" id="bannersoc1" src="../assets/logo.png">
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img16.jpeg">
         </a>
     </nav>
   </template>
@@ -80,7 +80,8 @@
         transition: background-color 0.3s ease;
         width: 100%; 
         max-width: 800px; 
-        text-align: left; 
+        text-align: left;
+        position: relative;  
     }
 
     .navigation .nav-item {
@@ -98,5 +99,10 @@
     .nav-item:hover {
         background-color: #86a029;
     }
-
+    .banner {
+        max-width: 500px; 
+        height: auto;
+        display: block; 
+        margin: 0 auto; 
+    }
 </style>

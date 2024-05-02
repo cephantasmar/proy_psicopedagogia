@@ -10,7 +10,7 @@
                 Este estudio se centró en explorar cómo la psicopedagogía puede contribuir de manera significativa a la creación de entornos educativos inclusivos que atiendan las necesidades de todos los estudiantes, 
                 independientemente de sus características individuales.
             </li>
-            <img class="banner" id="bannersoc1" src="../assets/logo.png">
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img8.jpeg">
         </a>
         <a class="nav-item right">
             <li>
@@ -19,7 +19,7 @@
                 Se llevó a cabo un estudio cualitativo que incluyó entrevistas en profundidad con psicopedagogos, docentes, 
                 directivos escolares y otros actores clave en el ámbito educativo.
             </li>
-            <img class="banner" id="bannersoc1" src="../assets/logo.png">
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img13.jpeg">
           </a>
           <a class="nav-item left">
             <li>
@@ -27,11 +27,10 @@
                 la adaptación curricular para atender las necesidades individuales de los estudiantes, y la promoción de un clima escolar positivo y acogedor. 
                 Además, se identificaron áreas de mejora en políticas educativas y programas de capacitación para fortalecer el papel de la psicopedagogía en la construcción de una sociedad más inclusiva y equitativa.
             </li>
-            <img class="banner" id="bannersoc1" src="../assets/logo.png">
+            <img class="banner" id="bannersoc1" src="../assets/ZASC/img14.jpeg">
         </a>
     </nav>
 </template>
-
 <script></script>
 <style>
    header{
@@ -80,7 +79,8 @@
         transition: background-color 0.3s ease;
         width: 100%; 
         max-width: 800px; 
-        text-align: left; 
+        text-align: left;
+        position: relative; 
     }
 
     .navigation .nav-item {
@@ -98,5 +98,10 @@
     .nav-item:hover {
         background-color: #c96916;
     }
-
+    .banner {
+        max-width: 500px; 
+        height: auto;
+        display: block; 
+        margin: 0 auto; 
+    }
 </style>

@@ -10,7 +10,7 @@
             Fue fundado en [1987] por un equipo de expertos en psicología y pedagogía, quienes reconocieron la necesidad de abordar de manera integral los desafíos que enfrentan los sistemas educativos bolivianos. La creación del grupo marcó un hito en el campo de la psicopedagogía en Bolivia, 
             al consolidar un espacio de investigación interdisciplinaria dedicado a comprender y mejorar los procesos de enseñanza-aprendizaje desde una perspectiva psicológica.
           </li>
-          <img class="banner" id="bannersoc1" src="../assets/logo.png">
+          <img class="banner" id="bannersoc1" src="../assets/ZASC/img7.jpeg">
       </a>
       <a class="nav-item right">
           <li>
@@ -18,7 +18,7 @@
             Con el paso de los años, el grupo ha demostrado un compromiso continuo con la excelencia académica y la aplicación práctica de sus investigaciones, 
             convirtiéndose en un referente importante en el ámbito de la psicopedagogía a nivel nacional e internacional.
           </li>
-          <img class="banner" id="bannersoc1" src="../assets/logo.png">
+          <img class="banner" id="bannersoc1" src="../assets/ZASC/img8.jpeg">
         </a>
   </nav>
 </template>
@@ -71,7 +71,8 @@
         transition: background-color 0.3s ease;
         width: 100%; 
         max-width: 800px; 
-        text-align: left; 
+        text-align: left;
+        position: relative; 
     }
 
     .navigation .nav-item {
@@ -89,5 +90,10 @@
     .nav-item:hover {
         background-color: #c96916;
     }
-
+    .banner {
+        max-width: 500px; 
+        height: auto;
+        display: block; 
+        margin: 0 auto; 
+    }
 </style>

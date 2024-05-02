@@ -4,11 +4,10 @@
         <h1>ZONA DE APRENDIZAJE</h1>
     </header>
     <nav class="navigation">
-        <router-link class="nav-item left" to="/grupoZA">DATA DEL GRUPO</router-link>
+        <router-link class="nav-item left" to="/grupoZA">DATA DEL GRUPO Y CONTACTO</router-link>
         <router-link class="nav-item right" to="/EXISTENCIAZA">¿DESDE CUANDO EXISTE EL GRUPO?</router-link>
         <router-link class="nav-item left" to="/ACCIONZA">ACCIONES INVESTIGATIVAS</router-link>
-        <router-link class="nav-item right" to="/CONTACTOSZA">DATOS DEL CONTACTO</router-link>
-        <router-link class="nav-item left" to="/INVESTIGACIONZA">PRESENTE INVESTIGACION</router-link>
+        <router-link class="nav-item right" to="/INVESTIGACIONZA">PRESENTE INVESTIGACION</router-link>
      </nav>
      
 </template>

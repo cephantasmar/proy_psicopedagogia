@@ -8,13 +8,11 @@ import centro_investigaciones from '../components/centro_investigaciones.vue'
 import formacion_continua from '../components/formacion_continua.vue'
 
 import grupoSC from '@/components/grupoSC.vue'
-import CONTACTOSSC from '@/components/CONTACTOSSC.vue'
 import ACCIONSC from '@/components/ACCIONSC.vue'
 import EXISTENCIASC from '@/components/EXISTENCIASC.vue'
 import INVESTIGACIONSC from '@/components/INVESTIGACIONSC.vue'
 
 import grupoZA from '@/components/grupoZA.vue'
-import CONTACTOSZA from '@/components/CONTACTOSZA.vue'
 import ACCIONZA from '@/components/ACCIONZA.vue'
 import EXISTENCIAZA from '@/components/EXISTENCIAZA.vue'
 import INVESTIGACIONZA from '@/components/INVESTIGACIONZA.vue'
@@ -65,11 +63,6 @@ const router = createRouter({
       component: grupoSC
     },
     {
-      path: '/CONTACTOSSC',
-      name: 'CONTACTOSSC',
-      component: CONTACTOSSC
-    },
-    {
       path: '/ACCIONSC',
       name: 'ACCIONSC',
       component: ACCIONSC
@@ -89,11 +82,6 @@ const router = createRouter({
       path: '/grupoZA',
       name: 'grupoZA',
       component: grupoZA
-    },
-    {
-      path: '/CONTACTOSZA',
-      name: 'CONTACTOSZA',
-      component: CONTACTOSZA
     },
     {
       path: '/ACCIONZA',
